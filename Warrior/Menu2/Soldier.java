@@ -10,7 +10,8 @@ public class Soldier extends Actor
 {
     private final int GRAVITY = 1;
     private int velocity;
-    
+    GifImage right = new GifImage("runRight.gif");
+    GifImage left = new GifImage("runLeft.gif");
     public Soldier() {
         velocity = 0; 
     }
@@ -61,6 +62,8 @@ public class Soldier extends Actor
         int y = getY();
         int x = getX();
         if( Greenfoot.isKeyDown("a") ) {
+            
+            setImage( left.getCurrentImage());
             setRotation(180);
             //setImage(image1);
             x -= 5;
@@ -70,7 +73,7 @@ public class Soldier extends Actor
             setRotation(0);
             //setImage(image2);
             x += 5;
-            
+            setImage( right.getCurrentImage());
         }
         
         setLocation(x,y);
