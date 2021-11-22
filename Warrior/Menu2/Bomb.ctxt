@@ -7,5 +7,5 @@ comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Bomb\ wants\ to\ do.\ This\ metho
 comment2.params=
 comment2.target=void\ move()
 comment3.params=
-comment3.target=void\ canSee()
+comment3.target=void\ disappear()
 numComments=4

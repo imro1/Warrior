@@ -16,22 +16,27 @@ public class Bomb extends Enemies
     {
         setLocation(getX(), getY() +20);
         move();
-        canSee();
+        
+        disappear();
     }
     public void move()
     {
-        move(10);
+        move(8);
     }
      
-    public void canSee()
+    
+    
+    public void disappear()
     {
         int number = 0;
-        if( isTouching(Brick.class) )
+        if( isTouching(Brick.class) || (isAtEdge() ))
         {
            //setImage("");
-            
+
            getWorld().removeObject(this);
        
         }
+        
+       
     }
 }

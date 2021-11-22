@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Plane extends Enemies
 {
     private int speed;
+    private int timeToDrop = 0;
     
     public Plane() {
         speed = Greenfoot.getRandomNumber(10) + 5;
@@ -25,10 +26,19 @@ public class Plane extends Enemies
     public void bombFalling(){
         
         //int num =  Greenfoot.getRandomNumber(500) +200 ;
-        if ( getX() >= 200 && getX() <= 400) {
-            getWorld().addObject(new Bomb(), getX(), getY()); 
+       
+        if (getX() >= 100 && getX() <= 800) {
+            if (timeToDrop == 0){
+                //time to drop the bomb
+                getWorld().addObject(new Bomb(), getX(), getY()); 
+                timeToDrop = 30;
+            } else {
+                timeToDrop--;
+            }
+            //time to drop the bomb
+            //drop every 30 fram 
         }
-        
+    
     }
     
     public void touchingEdge() {
