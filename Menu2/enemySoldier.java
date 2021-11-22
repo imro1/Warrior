@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class enemySoldier extends Enemies
 {
-    private int En_SoldierLife = 50;      
+    private int En_SoldierLife = 50;   
+    
+    private GreenfootImage E_image1 = new GreenfootImage ("Soldier1_walk_1.png"); 
+    private GreenfootImage E_image2 = new GreenfootImage ("Soldier1_walk_1_180.png");
     
     public void act()
     {
@@ -28,9 +31,18 @@ public class enemySoldier extends Enemies
     {
         Soldier soldier = (Soldier)getWorld().getObjects(Soldier.class).get(0);
         int PlayerX = soldier.getX();
-        int PlayerY = soldier.getY();
-        turnTowards(PlayerX,PlayerY);
+        
+        //int PlayerY = soldier.getY();  dont want it to follow ur y axis
+        turnTowards(PlayerX,530);
         move(2);
-         
+        setRotation(0);
+        //the image used will depend on which side the player is located
+        if( PlayerX < getX() ) {
+            setImage(E_image1);
+        }
+        if( PlayerX > getX() ) {
+            setImage(E_image2);
+        }
+        
     }
 }

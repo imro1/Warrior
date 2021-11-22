@@ -73,13 +73,6 @@ public class Soldier extends Actor
             
         }
         
-        //if( Greenfoot.isKeyDown("w") /*&& getRotation() != 180 */) {
-        //    setLocation(getX(), getY() - 5);    
-        //}
-        //if( Greenfoot.isKeyDown("s") /* && getRotation() !=0) */){
-        //    turn(5);    
-        //} 
-    
         setLocation(x,y);
     }
     //preventing from going through the Brick object (from the bottom)

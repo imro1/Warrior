@@ -8,12 +8,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Plane extends Enemies
 {
-    /**
-     * Act - do whatever the Plane wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int speed;
+    
+    public Plane() {
+        speed = Greenfoot.getRandomNumber(10) + 5;
+    }
+    
     public void act()
     {
-        // Add your action code here.
+        setLocation(getX() + speed, getY());
+        bombFalling();
+        touchingEdge();
+        
+    }
+    
+    public void bombFalling(){
+        
+        //int num =  Greenfoot.getRandomNumber(500) +200 ;
+        if ( getX() >= 200 && getX() <= 400) {
+            getWorld().addObject(new Bomb(), getX(), getY()); 
+        }
+        
+    }
+    
+    public void touchingEdge() {
+        if( isAtEdge() ) {
+            getWorld().removeObject(this);
+        }
     }
 }

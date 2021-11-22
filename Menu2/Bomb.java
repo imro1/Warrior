@@ -14,6 +14,24 @@ public class Bomb extends Enemies
      */
     public void act()
     {
-        // Add your action code here.
+        setLocation(getX(), getY() +20);
+        move();
+        canSee();
+    }
+    public void move()
+    {
+        move(10);
+    }
+     
+    public void canSee()
+    {
+        int number = 0;
+        if( isTouching(Brick.class) )
+        {
+           //setImage("");
+            
+           getWorld().removeObject(this);
+       
+        }
     }
 }
