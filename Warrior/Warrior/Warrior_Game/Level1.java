@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1 extends World
 {
-
+    private int delay = 0;
+    private boolean waiting = false;
     /**
      * Constructor for objects of class Level1.
      * 
@@ -19,15 +20,32 @@ public class Level1 extends World
         super(900, 600, 1); 
         prepare();
         setPaintOrder(Plane.class);
-        for( int i = 0; i <= 6; i++){
+        for( int i = 0; i <= 0; i++){
            int x = 950; 
-           int y = Greenfoot.getRandomNumber(530);
+           int y =(530);
            //int y = 530;
            addObject( new enemySoldier(), x, y );
+           addObject( new enemySoldier(),950,530);
+           waiting = true;
         } 
     }
     public void act()
     {
+       if (waiting) {
+       delay++;
+       if (delay >= 200) { // you'll have to pick a number for limit
+           
+        int x = 950; 
+        int y = 530;
+        //int y = 530;
+        addObject( new enemySoldier(), x, y );
+        addObject( new enemySoldier(),0,530);
+        waiting = true;
+        delay = 0;
+        // you may set waiting to true or false depending on if you want to add more objects or just one
+       }
+       } 
+        
         //Enemy Soldiers
       /*  if (Greenfoot.getRandomNumber(100) < 5) {
              addObject( new  enemySoldier(), 50, 530);
