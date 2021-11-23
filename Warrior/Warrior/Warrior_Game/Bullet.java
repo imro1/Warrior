@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bullet extends Mover
 {   
     private static final int damage = 10;
-    
     private int life = 30;
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
@@ -28,10 +27,18 @@ public class Bullet extends Mover
         else {
             life--;
             move();
-            checkAsteroidHit();
+            checkEnemyHit();
         }
     }
-    private void checkAsteroidHit()
+    
+    public void resize()
+    {
+        GreenfootImage image = new GreenfootImage("Bullet_3.png");
+        image.scale(image.getWidth() - 560, image.getHeight() - 450);
+        setImage(image);
+    }
+
+    private void checkEnemyHit()
     {
         enemySoldier enemysoldier = (enemySoldier) getOneIntersectingObject(enemySoldier.class);
         if (enemysoldier != null) 
@@ -40,4 +47,5 @@ public class Bullet extends Mover
             enemysoldier.hit(damage);
         }
     }
+
 }

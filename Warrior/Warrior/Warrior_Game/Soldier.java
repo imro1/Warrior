@@ -32,10 +32,10 @@ public class Soldier extends Actor
     public void shoot(){
         
         Bullet bullet = new Bullet();
-        getWorld().addObject(bullet, getX(), getY()-50);
+        getWorld().addObject(bullet, getX(), getY()-37);
         
         bullet.setRotation(getRotation()); //allows to shoot the bullet towards the direction u are looking at
-        bullet.move(50);     //shoots bullet infront of the soldier and not from inside of him
+        bullet.move(60);     //shoots bullet infront of the soldier and not from inside of him
     }
     
     public void fall() {
