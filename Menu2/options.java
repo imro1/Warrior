@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class options extends MenuWorld
 {
     Arrow arrow = new Arrow();
-    private int option=0;
+     private int option=0;
     /**
      * Constructor for objects of class options.
      * 
@@ -17,17 +17,18 @@ public class options extends MenuWorld
     public options()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 450); 
+        super(600, 400); 
         objectpreparation();
     }
     private void objectpreparation(){
-        addObject(new back(),351,347);
-        addObject(new controlsButton(),246,270);
-        addObject(arrow,76,272);
+        addObject(new back(),351,346);
+        addObject(new controlsButtom(),246,270);
+        addObject(arrow,76,276);
     }
     
     public void act(){
-        boolean good=goodToContinue(); 
+
+    boolean good=goodToContinue(); 
     if(good == false){
         return;
     }
@@ -49,6 +50,5 @@ public class options extends MenuWorld
                 break;
             }          
         }
-        }
     }
-
+}
