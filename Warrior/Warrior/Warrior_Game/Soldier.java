@@ -25,6 +25,7 @@ public class Soldier extends Actor
         }
         if( "space".equals( Greenfoot.getKey() )) { //getKey allows to shoot only when i press the key
              shoot();
+             Greenfoot.playSound("gunshot.mp3");
         }
         
     }
