@@ -1,2 +1,0 @@
-# Warrior
-Final project game
