@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level1 extends World
+public class Level1 extends MenuWorld
 {
     private int delay = 0;
     private boolean waiting = false;
@@ -17,7 +17,7 @@ public class Level1 extends World
     public Level1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 600, 1); 
+        super(900, 600); 
         prepare();
         setPaintOrder(Plane.class);
         for( int i = 0; i <= 0; i++){
@@ -74,9 +74,9 @@ public class Level1 extends World
         soldier.setLocation(436,515);
         soldier.setLocation(430,14);
 
-        Border border = new Border();
-        addObject(border,30,525);
-        border.setLocation(30, 525);
+        //Border border = new Border();
+       //addObject(border,30,525);
+        //border.setLocation(30, 525);
 
         
     }

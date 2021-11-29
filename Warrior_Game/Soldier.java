@@ -6,12 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Soldier extends Actor
+public class Soldier extends Player
 {
     private final int GRAVITY = 1;
     private int velocity;
     GifImage right = new GifImage("RunRight.gif");
     GifImage left = new GifImage("RunLeft.gif");
+    SimpleTimer shotTimer = new SimpleTimer();
     public Soldier() {
         velocity = 0; 
     }
@@ -23,9 +24,10 @@ public class Soldier extends Actor
         if (Greenfoot.isKeyDown("w" ) && isOnPlatform() ) {
             jump();
         }
-        if( "space".equals( Greenfoot.getKey() )) { //getKey allows to shoot only when i press the key
+        if(Greenfoot.isKeyDown("SPACE") && shotTimer.millisElapsed() > 250 ){ //getKey allows to shoot only when i press the key
              shoot();
              Greenfoot.playSound("gunshot.mp3");
+             shotTimer.mark();
         }
         
     }

@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Arrow here.
+ * Write a description of class Player here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Arrow extends MenuKeys
+public class Player extends Actor
 {
     /**
-     * Act - do whatever the Arrow wants to do. This method is called whenever
+     * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
