@@ -10,8 +10,8 @@ public class Soldier extends Actor
 {
     private final int GRAVITY = 1;
     private int velocity;
-    GifImage right = new GifImage("runRight2.gif");
-    GifImage left = new GifImage("runLeft2.gif");
+    GifImage right = new GifImage("RunRight.gif");
+    GifImage left = new GifImage("RunLeft.gif");
     public Soldier() {
         velocity = 0; 
     }
@@ -20,10 +20,10 @@ public class Soldier extends Actor
     {
         fall();
         move();
-        if (Greenfoot.isKeyDown("space" ) && isOnPlatform() ) {
+        if (Greenfoot.isKeyDown("w" ) && isOnPlatform() ) {
             jump();
         }
-        if( "down".equals( Greenfoot.getKey() )) { //getKey allows to shoot only when i press the key
+        if( "space".equals( Greenfoot.getKey() )) { //getKey allows to shoot only when i press the key
              shoot();
         }
         

@@ -22,10 +22,10 @@ public class Level1 extends World
         setPaintOrder(Plane.class);
         for( int i = 0; i <= 0; i++){
            int x = 950; 
-           int y =(530);
+           int y =(540);
            //int y = 530;
            addObject( new enemySoldier(), x, y );
-           addObject( new enemySoldier(),950,530);
+           addObject( new enemySoldier(),950,540);
            waiting = true;
         } 
     }
@@ -36,10 +36,10 @@ public class Level1 extends World
        if (delay >= 200) { // you'll have to pick a number for limit
            
         int x = 950; 
-        int y = 530;
+        int y = 540;
         //int y = 530;
         addObject( new enemySoldier(), x, y );
-        addObject( new enemySoldier(),0,530);
+        addObject( new enemySoldier(),0,540);
         waiting = true;
         delay = 0;
         // you may set waiting to true or false depending on if you want to add more objects or just one
