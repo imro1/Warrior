@@ -19,7 +19,7 @@ public class Level1 extends MenuWorld
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 600); 
         prepare();
-        setPaintOrder(Plane.class);
+        setPaintOrder(Border.class,Plane.class);
         for( int i = 0; i <= 0; i++){
            int x = 950; 
            int y =(540);
@@ -61,23 +61,27 @@ public class Level1 extends MenuWorld
 
         Soldier soldier = new Soldier();
         addObject(soldier,149,515);
-        ///////////////////////////////////////////////////////////
-        /*
-        enemySoldier enemySoldier = new enemySoldier();
-        addObject(enemySoldier,947,530);
-         */
-        ///////////////////////////////////////////////////////////
-        Brick brick2 = new Brick(250, 30);
-        addObject(brick2,450,420);
-        brick2.setLocation(450,420);
+        
 
         soldier.setLocation(436,515);
         soldier.setLocation(430,14);
 
-        //Border border = new Border();
-       //addObject(border,30,525);
-        //border.setLocation(30, 525);
+    
+        Border border = new Border(100, 650);
+        addObject(border,124,339);
+        border.setLocation(40,314);
 
+        Border border2 = new Border(100, 650);
+        addObject(border2,837,339);
+        border2.setLocation(869,313);
+
+        Brick brick = new Brick(250, 20);
+        addObject(brick,800,410);
+        brick.setLocation(800,410);
         
+        Brick brick2 = new Brick(250, 20);
+        addObject(brick2,100,410);
+        brick2.setLocation(100,410);
+        brick.setLocation(800,410);
     }
 }

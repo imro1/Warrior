@@ -26,7 +26,7 @@ public class godPlane extends Player
      if(Greenfoot.isKeyDown("a")){
             setLocation(getX()-5,getY());
     }
-    if( "down".equals( Greenfoot.getKey() )) { //getKey allows to shoot only when i press the key
+    if( "space".equals( Greenfoot.getKey() )) { //getKey allows to shoot only when i press the key
              shoot();
         }
     if(isTouching(Plane2.class)||isTouching(Bullet2.class)){
