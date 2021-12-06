@@ -75,9 +75,15 @@ public class Level1 extends MenuWorld
         soldier.setLocation(430,14);
 
         //Border border = new Border();
-       //addObject(border,30,525);
+        //addObject(border,30,525);
         //border.setLocation(30, 525);
 
-        
+        HealthBar healthBar = new HealthBar();
+        addObject(healthBar,123,45);
+        soldier.setLocation(419,535);
+    }
+
+    public HealthBar getHealthBar(){
+     return getObjects(HealthBar.class).get(0);
     }
 }

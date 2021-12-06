@@ -37,5 +37,9 @@ public class HealthBar extends Actor
     }
     public void loseHealth(){
         health--;
+        if(health==0){//losse condition 
+            Greenfoot.stop();
+            getWorld().showText("You losse",250,250);//to make it look better make own image 
+        }
     }
 }

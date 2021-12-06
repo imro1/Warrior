@@ -29,7 +29,14 @@ public class Soldier extends Player
              Greenfoot.playSound("gunshot.mp3");
              shotTimer.mark();
         }
+        if(isTouching(enemySoldier.class)||isTouching(Bomb.class)){
         
+       World world = getWorld();
+       Level1 myWorld = (Level1)world;
+       HealthBar healthbar = myWorld.getHealthBar();
+       healthbar.loseHealth(); 
+       removeTouching(Bomb.class);
+    }
     }
     
     public void shoot(){
