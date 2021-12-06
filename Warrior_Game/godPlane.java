@@ -8,10 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class godPlane extends Player
 {
-    /**
-     * Act - do whatever the godPlane wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
+    protected SimpleTimer shotTimer =  new  SimpleTimer();
     public void act()
     {
         if(Greenfoot.isKeyDown("w")){
@@ -26,11 +24,11 @@ public class godPlane extends Player
      if(Greenfoot.isKeyDown("a")){
             setLocation(getX()-5,getY());
     }
-    if( "down".equals( Greenfoot.getKey() )) { //getKey allows to shoot only when i press the key
+    if( (Greenfoot.isKeyDown("SPACE") && shotTimer.millisElapsed() > 250)) { //getKey allows to shoot only when i press the key
              shoot();
+             shotTimer.mark();
         }
     if(isTouching(Plane2.class)||isTouching(Bullet2.class)){
-        
        World world = getWorld();
        Level2 myWorld = (Level2)world;
        HealthBar healthbar = myWorld.getHealthBar();
@@ -38,6 +36,13 @@ public class godPlane extends Player
         removeTouching(Plane2.class);
         removeTouching(Bullet2.class);
     }
+    if (isTouching(Plane2.class)) {
+            World world = getWorld();
+            Level1 myWorld = (Level1)world;
+            HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+            removeTouching(Plane2.class);
+        }
     }
     public void shoot(){
         
