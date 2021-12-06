@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class enemySoldier extends Enemies
 {
-    private int En_SoldierLife = 40;   
+    private int En_SoldierLife = 30;   
     
     GifImage E_image1 = new GifImage ("walking.gif"); 
     GifImage E_image2 = new GifImage ("walking180.gif");

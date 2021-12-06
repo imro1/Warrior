@@ -19,7 +19,7 @@ public class Level1 extends MenuWorld
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 600); 
         prepare();
-        setPaintOrder(Plane.class);
+        setPaintOrder(HealthBar.class,Border.class,Plane.class);
         for( int i = 0; i <= 0; i++){
            int x = 950; 
            int y =(540);
@@ -52,38 +52,73 @@ public class Level1 extends MenuWorld
              addObject( new  Plane(), 1, Greenfoot.getRandomNumber(40)+40);
              
         }
-        /*if (Greenfoot.getRandomNumber(1000) <= 5) {
-            addObject( new  Plane(), 1000,80);
-        }   */         
+              
     }
-
-    public void prepare() {
-
-        Soldier soldier = new Soldier();
-        addObject(soldier,149,515);
-        ///////////////////////////////////////////////////////////
-        /*
-        enemySoldier enemySoldier = new enemySoldier();
-        addObject(enemySoldier,947,530);
-         */
-        ///////////////////////////////////////////////////////////
-        Brick brick2 = new Brick(250, 30);
-        addObject(brick2,450,420);
-        brick2.setLocation(450,420);
-
-        soldier.setLocation(436,515);
-        soldier.setLocation(430,14);
-
-        //Border border = new Border();
-        //addObject(border,30,525);
-        //border.setLocation(30, 525);
-
-        HealthBar healthBar = new HealthBar();
-        addObject(healthBar,123,45);
-        soldier.setLocation(419,535);
-    }
-
+    
     public HealthBar getHealthBar(){
      return getObjects(HealthBar.class).get(0);
     }
+
+    public void prepare() {
+        Soldier soldier = new Soldier();
+        addObject(soldier,149,515);
+
+        soldier.setLocation(436,515);
+        soldier.setLocation(430,14);
+        
+        HealthBar healthbar = new HealthBar();
+        addObject(healthbar, 123,45);
+        
+        Brick brick = new Brick(250, 20);
+        addObject(brick,800,410);
+        brick.setLocation(800,410);
+
+        Brick brick2 = new Brick(250, 20);
+        addObject(brick2,100,410);
+        brick2.setLocation(100,410);
+
+        Border border = new Border();
+        addObject(border,615,396);
+        border.setLocation(896, 520);
+
+        Border border2 = new Border();
+        addObject(border2,825,225);
+        border2.setLocation(896, 370);
+
+        Border border3 = new Border();
+        addObject(border3,74,73);
+        border3.setLocation(896, 220);
+
+        Border border4 = new Border();
+        addObject(border4,862,524);
+        border4.setLocation(896,70);
+        
+        Border border5 = new Border();
+        addObject(border5,619,378);
+        border5.setLocation(896,593);
+        
+    
+        Border border6 = new Border();
+        addObject(border6,615,396);
+        border6.setLocation(4, 520);
+
+        Border border7 = new Border();
+        addObject(border7,825,225);
+        border7.setLocation(4, 370);
+
+        Border border8 = new Border();
+        addObject(border8,74,73);
+        border8.setLocation(4, 220);
+
+        Border border9 = new Border();
+        addObject(border9,862,524);
+        border9.setLocation(4,70);
+        
+        Border border10 = new Border();
+        addObject(border10,619,378);
+        border10.setLocation(4,593);
+        
+    }
+
+    
 }

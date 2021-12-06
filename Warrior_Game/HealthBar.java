@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
-public class HealthBar extends Actor
+public class HealthBar extends Player
 {
     /**
      * Act - do whatever the HealthBar wants to do. This method is called whenever
