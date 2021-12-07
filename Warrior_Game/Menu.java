@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends MenuWorld
 {
+    GreenfootSound menu = new GreenfootSound("menu.mp3");
     Arrow arrow = new Arrow();
     private int option=0;
     /**
@@ -19,6 +20,8 @@ public class Menu extends MenuWorld
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 450); 
         worldpreparation();
+        menu.playLoop();
+
     }
     private void worldpreparation(){
         addObject(new play(),400,250);
