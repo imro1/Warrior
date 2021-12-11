@@ -1,14 +1,14 @@
 
-#Warrior
+# Warrior
 
-##PURPOSE OF PROJECT:
+## PURPOSE OF PROJECT:
     Survive, get points, and kill the boss
     
-##HOW TO START THE GAME:
+## HOW TO START THE GAME:
 PRESS "Run", and use the "up" and "down" keys to move and "enter" to select
 **********************ADD MORE THINGS IDK EHAT TO WRITE**************
 
-##CONTROLS:
+## CONTROLS:
     Level 1:
         "A" key to move left
         "D" key to move right
@@ -22,9 +22,9 @@ PRESS "Run", and use the "up" and "down" keys to move and "enter" to select
         "S" key to move down
         Hold "Space" to shoot
 
-##AUTHORS:
+## AUTHORS:
     Mubeen Khan, David, Imran
     
-##VERSION or DATE:
+## VERSION or DATE:
     Version 5.0
 
