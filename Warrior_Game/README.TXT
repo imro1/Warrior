@@ -1,12 +1,30 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+#Warrior
+
+##PURPOSE OF PROJECT:
+    Survive, get points, and kill the boss
+    
+##HOW TO START THE GAME:
+PRESS "Run", and use the "up" and "down" keys to move and "enter" to select
+**********************ADD MORE THINGS IDK EHAT TO WRITE**************
+
+##CONTROLS:
+    Level 1:
+        "A" key to move left
+        "D" key to move right
+        "W" key to jump
+        Hold "Space" to shoot
+        
+    Level 2:
+        "A" key to move left
+        "D" key to move right
+        "W" key to move up
+        "S" key to move down
+        Hold "Space" to shoot
+
+##AUTHORS:
+    Mubeen Khan, David, Imran
+    
+##VERSION or DATE:
+    Version 5.0
+
