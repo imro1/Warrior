@@ -8,10 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class godPlane extends Player
 {
-    
+    protected GifImage yo =  new  GifImage("Greenplane.gif");
     protected SimpleTimer shotTimer =  new  SimpleTimer();
     public void act()
     {
+        setImage(yo.getCurrentImage());
         if(Greenfoot.isKeyDown("w")){
             setLocation(getX(),getY()-5);
     }
@@ -47,7 +48,7 @@ public class godPlane extends Player
     public void shoot(){
         
         Bullet bullet = new Bullet();
-        getWorld().addObject(bullet, getX(), getY()-37);
+        getWorld().addObject(bullet, getX(), getY()-20);
         
         bullet.setRotation(getRotation()); //allows to shoot the bullet towards the direction u are looking at
         bullet.move(60);     //shoots bullet infront of the soldier and not from inside of him

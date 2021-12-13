@@ -47,5 +47,14 @@ public class Bullet extends Mover
             enemysoldier.hit(damage);
         }
     }
+    private void checkTankHit()
+    {
+        T_body tank = (T_body) getIntersectingObjects(T_body.class);
+        if (tank !=null)
+        {
+            getWorld().removeObject(this);
+            tank.hit(damage);
+        }
+    }
 
 }

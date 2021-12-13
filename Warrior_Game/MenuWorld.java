@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MenuWorld extends World
 {
+    
     private int frame=0;
     /**
      * Constructor for objects of class MenuWorld.

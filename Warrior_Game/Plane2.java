@@ -12,6 +12,7 @@ public class Plane2 extends Enemies
      * Act - do whatever the Plane2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    protected GifImage attack =  new  GifImage("Fokker.gif");
     private int speed;
     private int timeToDrop = 0;
     SimpleTimer shotTimer = new SimpleTimer();
@@ -20,8 +21,8 @@ public class Plane2 extends Enemies
     }
     public void act()
     {
+        setImage(attack.getCurrentImage());
         setLocation(getX() - speed, getY());
-        
         if(  !isAtEdge() && shotTimer.millisElapsed() > 600){
           shoot();
           shotTimer.mark();
@@ -35,9 +36,13 @@ public class Plane2 extends Enemies
        }
         touchingEdge();
     }
+    
     public void touchingEdge() {
         if( isAtEdge() ) {
-            getWorld().removeObject(this);
+            World world = (World) getWorld();
+            world.addObject(new Explosion(), getX(), getY());
+            world.removeObject(this);
+           
         }
     }
     public void shoot(){

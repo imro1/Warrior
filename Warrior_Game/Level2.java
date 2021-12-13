@@ -24,6 +24,7 @@ public class Level2 extends MenuWorld
             waiting = true;
         } 
         prepare();
+        Explosion.initializeImages();
     }
 
     public void act()

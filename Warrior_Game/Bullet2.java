@@ -24,6 +24,7 @@ public class Bullet2 extends Mover
             life--;
             move();
             checkEnemyHit();
+            checkTankHit();
         }
     }
     public void resize()
@@ -39,6 +40,15 @@ public class Bullet2 extends Mover
         {
             getWorld().removeObject(this);
             enemysoldier.hit(damage);
+        }
+    }
+    private void checkTankHit()
+    {
+        T_body tank = (T_body) getIntersectingObjects(T_body.class);
+        if (tank !=null)
+        {
+            getWorld().removeObject(this);
+            tank.hit(damage);
         }
     }
 }

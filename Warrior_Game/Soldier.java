@@ -52,6 +52,13 @@ public class Soldier extends Player
             healthbar.loseHealth();
             removeTouching(enemySoldier.class);
         }
+        if (isTouching(Bullet.class)){
+            World world = getWorld();
+            Level3 myWorld = (Level3)world;
+            HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+            removeTouching(Bullet.class);
+        }
     }
 
     /**
@@ -63,7 +70,7 @@ public class Soldier extends Player
         getWorld().addObject(bullet, getX(), getY() - 37);
         bullet.setRotation(getRotation());
         /* allows to shoot the bullet towards the direction u are looking at*/
-        bullet.move(60);
+        bullet.move(100);
         /* shoots bullet infront of the soldier and not from inside of him*/
     }
 
